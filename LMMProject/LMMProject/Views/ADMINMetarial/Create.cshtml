@@ -1,0 +1,90 @@
+﻿@model IEnumerable<LMMProject.Models.Subject>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Create</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/delete.css">
+</head>
+<body>
+    <div class="color">
+        <h1> Create Material</h1>
+    </div>
+    <div class="container-center">
+        <div class="col-md-4">
+            <div class="square-container">
+                <form method="POST" action="/ADMINMetarial/SubmitCreate" id="form-submit">
+                    <div class="form-group mb-3">
+                        <label>Select subject</label>
+                        <select class="form-control" name="SubjectCode">
+                            @foreach (var item in Model)
+                            {
+                                <option>@item.SubjectCode</option>
+                            }
+                        </select>
+                        <div class="form-group mb-3">
+                            <label>Author</label>
+                            <input class="form-control" type="text" name="Author" placeholder="Enter the Author" />
+                        </div>
+                        <div class="form-group mb-3">
+                            <label>Publisher</label>
+                            <input class="form-control" type="text" name="Publisher" placeholder="Enter the Publisher" />
+                        </div>
+                        <div class="form-group mb-3">
+                            <label>Published Date</label>
+                            <input class="form-control" type="date" name="PublishedDate" placeholder="Enter the Published Date" />
+                        </div>
+                        <div class="form-group mb-3">
+                            <label>URL</label>
+                            <div class="textarea-wrapper">
+                            <textarea class="form-control" type="text" name="URL" placeholder="Enter the URL" ></textarea>
+                        </div>
+                        </div>
+
+                        <div class="form-group mb-3">
+                            <label>Description</label>
+                                <div class="textarea-wrapper">
+                            <textarea class="form-control" placeholder="Enter the Description" name="MaterialDescription"></textarea>
+                        </div>
+                            </div>
+
+                        <div class="form-group mb-3">
+                            <button type="button" id="btn-submit-data" class="btn btn-success">Create</button> |
+                            <a asp-action="Index" class="btn btn-primary">Back to List</a>
+
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js" asp-append-version="true"></script>
+    <script>
+        $('#btn-submit-data').on('click', function (e) {
+            e.preventDefault();
+            var isValid = true;
+            $('#form-submit input, #form-submit textarea').each(function () {
+                if ($.trim($(this).val())) {
+                    $(this).next('.text-danger').remove();
+                } else {
+                    isValid = false;
+                    $(this).next('.text-danger').remove();
+                    $(this).after('<span class="text-danger">This field is required</span>');
+                }
+            });
+            if (isValid) {
+                $('#form-submit').submit();
+            }
+        })
+    </script>
+</body>
+</html>

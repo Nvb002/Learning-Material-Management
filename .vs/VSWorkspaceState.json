@@ -1,0 +1,15 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\LMMProject",
+    "\\LMMProject\\LMMProject",
+    "\\LMMProject\\LMMProject\\Controllers",
+    "\\LMMProject\\LMMProject\\Views",
+    "\\LMMProject\\LMMProject\\Views\\ADMIN",
+    "\\LMMProject\\LMMProject\\Views\\ADMINSession",
+    "\\LMMProject\\LMMProject\\Views\\UserCurriculum",
+    "\\LMMProject\\LMMProject\\Views\\UserHome"
+  ],
+  "SelectedNode": "\\LMMProject\\LMMProject\\Views\\ADMINSession\\Index.cshtml",
+  "PreviewInSolutionExplorer": false
+}

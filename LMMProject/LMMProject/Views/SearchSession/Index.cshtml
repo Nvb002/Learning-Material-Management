@@ -1,0 +1,59 @@
+﻿@model SearchSessionModel
+@inject IHttpContextAccessor Accessor
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/search-subject.css">
+</head>
+<body>
+    <div class="curriculum">
+
+        <div class="navbar">
+            <img src="~/image/istockphoto-1138089745-170667a.jpg" class="logo">
+            <ul>
+                @if (Accessor.HttpContext.Session.GetString("Username") != null)
+                {
+
+                    <li><a asp-controller="UserHome" asp-action="Index">Home</a></li>
+
+                }
+                else
+                {
+
+                    <li><a asp-controller="Login" asp-action="Index">Back</a></li>
+
+                }
+            </ul>
+        </div>
+        <div class="content">
+            <b>
+                <h1>Learning Path by Subject</h1>
+                <p>Search</p>
+            </b>
+        </div>
+        <div class="search-box">
+            <form action="/SearchSession/Search">
+                <input class="input-box" name="subjectCode" placeholder="Enter Subject Code" />
+                <button class="search" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                @if (!string.IsNullOrEmpty(Model.Message))
+                {
+                    <h5 class="text-danger">@Model.Message</h5>
+                }
+            </form>
+        </div>
+
+    </div>
+
+
+</body>
+</html>

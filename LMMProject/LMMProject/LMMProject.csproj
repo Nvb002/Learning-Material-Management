@@ -1,0 +1,123 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="wwwroot\css\account.css" />
+    <Content Remove="wwwroot\css\assessment.css" />
+    <Content Remove="wwwroot\css\combo-detail.css" />
+    <Content Remove="wwwroot\css\crud-syllabus.css" />
+    <Content Remove="wwwroot\css\curri-index.css" />
+    <Content Remove="wwwroot\css\decision-detail.css" />
+    <Content Remove="wwwroot\css\decision-index.css" />
+    <Content Remove="wwwroot\css\delete-detail.css" />
+    <Content Remove="wwwroot\css\delete.css" />
+    <Content Remove="wwwroot\css\feedback.css" />
+    <Content Remove="wwwroot\css\material-detail.css" />
+    <Content Remove="wwwroot\css\material-index.css" />
+    <Content Remove="wwwroot\css\material-user.css" />
+    <Content Remove="wwwroot\css\materialteacher-index.css" />
+    <Content Remove="wwwroot\css\session-index.css" />
+    <Content Remove="wwwroot\css\subject-detail.css" />
+    <Content Remove="wwwroot\css\subject-index.css" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="wwwroot\js\site.js" />
+    <None Remove="wwwroot\css\site.css" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Views\ADMINAssessments\Create.cshtml" />
+    <None Include="Views\ADMINAssessments\Delete.cshtml" />
+    <None Include="Views\ADMINAssessments\Details.cshtml" />
+    <None Include="Views\ADMINAssessments\Edit.cshtml" />
+    <None Include="Views\ADMINAssessments\Index.cshtml" />
+    <None Include="Views\ADMINMaterialOfTeacher\Create.cshtml" />
+    <None Include="Views\ADMINMaterialOfTeacher\Delete.cshtml" />
+    <None Include="Views\ADMINMaterialOfTeacher\Details.cshtml" />
+    <None Include="Views\ADMINMaterialOfTeacher\Edit.cshtml" />
+    <None Include="Views\ADMINMaterialOfTeacher\Index.cshtml" />
+    <None Include="Views\ADMINSyllabus\Create.cshtml" />
+    <None Include="Views\ADMINSyllabus\Delete.cshtml" />
+    <None Include="Views\ADMINSyllabus\Details.cshtml" />
+    <None Include="Views\ADMINSyllabus\Edit.cshtml" />
+    <None Include="Views\ADMINSyllabus\Index.cshtml" />
+    <None Include="Views\SearchSession\Index.cshtml" />
+    <None Include="Views\SearchSession\Search.cshtml" />
+    <None Include="wwwroot\css\account.css" />
+    <None Include="wwwroot\css\combo-detail.css" />
+    <None Include="wwwroot\css\material-detail.css" />
+    <None Include="wwwroot\css\subject-detail.css" />
+    <None Include="wwwroot\css\material-user.css" />
+    <None Include="wwwroot\css\decision-index.css" />
+    <None Include="wwwroot\css\material-index.css" />
+    <None Include="wwwroot\css\materialteacher-index.css" />
+    <None Include="wwwroot\css\session-index.css" />
+    <None Include="wwwroot\css\decision-detail.css" />
+    <None Include="wwwroot\css\crud-syllabus.css" />
+    <None Include="wwwroot\css\delete.css" />
+    <None Include="wwwroot\css\combo-index.css" />
+    <None Include="wwwroot\css\contact.css" />
+    <None Include="wwwroot\css\curri-details.css" />
+    <None Include="wwwroot\css\feedback.css" />
+    <None Include="wwwroot\css\feedback-user.css" />
+    <None Include="wwwroot\css\home.css" />
+    <None Include="wwwroot\css\curri-index.css" />
+    <None Include="wwwroot\css\subject-index.css" />
+    <None Include="wwwroot\css\learning-part.css" />
+    <None Include="wwwroot\css\subject-user.css" />
+    <None Include="wwwroot\css\login.css" />
+    <None Include="wwwroot\css\delete-detail.css" />
+    <None Include="wwwroot\css\syllabus-details.css" />
+    <None Include="wwwroot\css\assessment.css" />
+    <None Include="wwwroot\css\syllabus-index.css" />
+    <None Include="wwwroot\css\syllabus.css" />
+    <None Include="wwwroot\html\combo.html" />
+    <None Include="wwwroot\html\contact.html" />
+    <None Include="wwwroot\html\curri-details.html" />
+    <None Include="wwwroot\html\curri-listing.html" />
+    <None Include="wwwroot\html\curriculum.html" />
+    <None Include="wwwroot\html\home.html" />
+    <None Include="wwwroot\html\learning-part.html" />
+    <None Include="wwwroot\html\learning.html" />
+    <None Include="wwwroot\html\login.html" />
+    <None Include="wwwroot\html\syllabus-details.html" />
+    <None Include="wwwroot\html\syllabus-management.html" />
+    <None Include="wwwroot\html\syllabus.html" />
+    <None Include="wwwroot\image\background-cuc-dep_110341249.jpg" />
+    <None Include="wwwroot\image\Background-sach-mo-dep-nhat.jpg" />
+    <None Include="wwwroot\image\istockphoto-1138089745-170667a.jpg" />
+    <None Include="wwwroot\image\signin.svg" />
+    <None Include="wwwroot\image\signup.svg" />
+    <None Include="wwwroot\js\curriculum.js" />
+    <None Include="wwwroot\js\login.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CloudinaryDotNet" Version="1.21.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.9" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.9" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.9">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.15" />
+    <PackageReference Include="MySql.Data" Version="8.1.0" />
+    <PackageReference Include="MySql.EntityFrameworkCore" Version="7.0.5" />
+    <PackageReference Include="SonarAnalyzer.CSharp" Version="9.4.0.72892">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="area\ADMIN\Controllers\" />
+    <Folder Include="area\ADMIN\Views\" />
+  </ItemGroup>
+
+</Project>

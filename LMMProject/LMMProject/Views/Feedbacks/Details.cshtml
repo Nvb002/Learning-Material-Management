@@ -1,0 +1,80 @@
+﻿@model LMMProject.Models.Feedback
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/feedback.css">
+    <title>Details</title>
+</head>
+<body>
+
+    <div class="curri-details">
+        <div class="navbar">
+            <img src="~/image/istockphoto-1138089745-170667a.jpg" class="logo">
+            <ul>              
+                <li><a asp-action="Index">Back to List</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <b>
+                <h1>Learning Materials Management</h1>
+                <p>Feedback</p>
+            </b>
+        </div>
+        <table class="table">
+            <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Content)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UserNameTo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UserNameFrom)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CreateDate)
+            </th>
+        </tr>
+            </thead>
+            <tbody>
+        <tr>
+            <td>
+                @Html.DisplayFor(model => model.Content)
+            </td>
+
+            <td>
+                @Html.DisplayFor(model => model.UserNameTo)
+            </td>
+
+            <td>
+                @Html.DisplayFor(model => model.UserNameFrom)
+            </td>
+
+            <td>
+                @Html.DisplayFor(model => model.Title)
+            </td>
+
+            <td>
+                @Html.DisplayFor(model => model.CreateDate)
+            </td>
+        </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

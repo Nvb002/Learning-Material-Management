@@ -1,0 +1,78 @@
+﻿@model LMMProject.Models.Feedback
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/delete-detail.css">
+    <title>Delete</title>
+</head>
+<body>
+    <div class="color">
+        <h1> Delete Feedback</h1>
+    </div>
+    <div>
+        <div class="container-center">
+            <table class="table">
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Content)
+                    </th>
+                    <td>
+                        @Html.DisplayFor(model => model.Content)
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.UserNameTo)
+                    </th>
+                    <td>
+                        @Html.DisplayFor(model => model.UserNameTo)
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.UserNameFrom)
+                    </th>
+                    <td>
+                        @Html.DisplayFor(model => model.UserNameFrom)
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Title)
+                    </th>
+                    <td>
+                        @Html.DisplayFor(model => model.Title)
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.CreateDate)
+                    </th>
+                    <td>
+                        @Html.DisplayFor(model => model.CreateDate)
+                    </td>
+                </tr>
+            </table>
+            <div class="delete-section">
+                <h4>Are you sure you want to delete?</h4>
+                <form asp-action="Delete">
+                    <input type="hidden" asp-for="FeedbackId" />
+                    <input type="submit" value="Delete" class="btn btn-danger" class="btn btn-primary" /> |
+                    <a asp-action="Index" class="btn btn-primary">Back to List</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
